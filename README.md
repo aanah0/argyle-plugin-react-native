@@ -80,9 +80,11 @@ steps from `without pods` part, plus
   	```
 
 
-## Usage
+## Usage (example)
 ```javascript
 import ARArgyleSdk from 'react-native-argyle-sdk'
+
+// Configure the SDK before hand, once. only call ArgyleSdk.start() when the UI is needed
 ArgyleSdk.loginWith("your_plugin_key", "https://api-sandbox.develop.argyle.io", "")
 ArgyleSdk.onUserCreated(res => console.log("onUserCreated", res))
 
@@ -103,5 +105,6 @@ ArgyleSdk.onTokenExpired(res => console.log("onTokenExpired", res))
 // ArgyleSdk.dataPartners(["uber", "postmates"])
 // ArgyleSdk.dataPartners(null)
 
+// Launches the SDK UI. Use on-click some button
 ArgyleSdk.start()
 ```
