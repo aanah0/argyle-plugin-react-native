@@ -1,7 +1,7 @@
 {
   "name": "@argyleio/react-native-argyle-sdk",
   "title": "React Native Argyle Sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "react-native-argyle-sdk",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "name": "Argyle Systems",
     "email": "argyle@argyle.io"
   },
-  "license": "MIT",
+  "license": "Apache 2.0",
   "licenseFilename": "Apache 2.0",
   "readmeFilename": "README.md",
   "peerDependencies": {
