@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.license      = "Apache 2.0"
   s.authors      = { "Argyle Systems" => "argyle@argyle.io" }
   s.platforms    = { :ios => "11.0", :tvos => "11.0" }
-  s.source       = { :git => "https://github.com/github_account/react-native-argyle-sdk.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/argyle-systems/sdk-react-native.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,swift}"
   s.requires_arc = true

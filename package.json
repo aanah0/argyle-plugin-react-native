@@ -2,25 +2,25 @@
   "name": "react-native-argyle-sdk",
   "title": "React Native Argyle Sdk",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "react-native-argyle-sdk",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/github_account/react-native-argyle-sdk.git",
-    "baseUrl": "https://github.com/github_account/react-native-argyle-sdk"
+    "url": "git+https://github.com/argyle-systems/sdk-react-native.git",
+    "baseUrl": "https://github.com/argyle-systems/sdk-react-native.git"
   },
   "keywords": [
     "react-native"
   ],
   "author": {
-    "name": "Your Name",
-    "email": "yourname@email.com"
+    "name": "Argyle Systems",
+    "email": "argyle@argyle.io"
   },
   "license": "MIT",
-  "licenseFilename": "LICENSE",
+  "licenseFilename": "Apache 2.0",
   "readmeFilename": "README.md",
   "peerDependencies": {
     "react": "^16.8.1",
