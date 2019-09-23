@@ -3,16 +3,16 @@
 ## Getting started
 
 `$ npm install react-native-argyle-sdk --save` or `$ yarn add react-native-argyle-sdk`
-`$ yarn add react-native-swift` (so that project can run swift code, mostly configuration thing)
-`$ react-native link react-native-swift` (even for react-native version > 0.60.x projects, it's mostly configuration, not adding any actual projects)
 
 ### Mostly automatic installation
 
-`$ react-native link react-native-argyle-sdk`
+`$ react-native link react-native-argyle-sdk` (if react-native > 0.60.x, this step is not needed)
 
 ### iOS extra steps installation:
 
 minimum deployment target needs to be at least 11.0
+`$ yarn add react-native-swift` (so that project can run swift code, mostly configuration thing)
+`$ react-native link react-native-swift` (even for react-native version > 0.60.x projects, it's mostly configuration, not adding any actual projects)
 
 # react-native version >= 0.60.x
 `$ cd ios`
@@ -64,7 +64,7 @@ steps from `without pods` part, plus
 3. In XCode, in the project navigator, select your project. Add `libARArgyleSdk.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
-#### Android
+#### Android manual installation
 
 1. Open up `android/app/src/main/java/[...]/MainApplication.java`
   - Add `import com.reactlibrary.ARArgyleSdkPackage;` to the imports at the top of the file
