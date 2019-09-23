@@ -99,4 +99,9 @@ ArgyleSdk.onError(error => {
     }
 })
 ArgyleSdk.onTokenExpired(res => console.log("onTokenExpired", res))
+
+// ArgyleSdk.dataPartners(["uber", "postmates"])
+// ArgyleSdk.dataPartners(null)
+
+ArgyleSdk.start()
 ```
