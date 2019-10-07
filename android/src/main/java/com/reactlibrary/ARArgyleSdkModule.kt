@@ -33,17 +33,17 @@ class ARArgyleSdkModule(context: ReactApplicationContext) : ReactContextBaseJava
             tokenHandler = handler
         }
 
-        override fun onAccountConnected(accountId: String, workerId: String) {
+        override fun onAccountConnected(accountId: String, userId: String) {
             val params = Arguments.createMap()
             params.putString("accountId", accountId)
-            params.putString("userId", workerId)
+            params.putString("userId", userId)
             sendEvent("onAccountConnected", params)
         }
 
-        override fun onAccountRemoved(accountId: String, workerId: String) {
+        override fun onAccountRemoved(accountId: String, userId: String) {
             val params = Arguments.createMap()
             params.putString("accountId", accountId)
-            params.putString("userId", workerId)
+            params.putString("userId", userId)
             sendEvent("onAccountRemoved", params)
         }
 
@@ -65,11 +65,11 @@ class ARArgyleSdkModule(context: ReactApplicationContext) : ReactContextBaseJava
             sendEvent("onError", params)
         }
 
-        override fun onWorkerCreated(workerToken: String, workerId: String) {
-            _token = workerToken
+        override fun onUserCreated(userToken: String, userId: String) {
+            _token = userToken
             val params = Arguments.createMap()
-            params.putString("userToken", workerToken)
-            params.putString("userId", workerId)
+            params.putString("userToken", userToken)
+            params.putString("userId", userId)
             sendEvent("onUserCreated", params)
             // return ["onAccountConnected", "onAccountRemoved", "onUserCreated", "onError", "onTokenExpired"]
         }

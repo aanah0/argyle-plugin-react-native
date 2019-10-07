@@ -39,7 +39,10 @@ class ARArgyleSdk: RCTEventEmitter {
     @objc(start)
     func start() {
         DispatchQueue.main.sync {
-            UIApplication.shared.keyWindow?.rootViewController?.present(Argyle.shared.controller, animated: true, completion: nil)
+            let argyle = Argyle.shared.updateToken("").controller
+            argyle.modalPresentationStyle = .fullScreen
+            
+            UIApplication.shared.keyWindow?.rootViewController?.present(argyle, animated: true, completion: nil)
         }
     }
     
@@ -77,19 +80,19 @@ extension ARArgyleSdk: ArgyleResultListener {
         sendEvent(withName: "onError", body: ["error": translatedError])
     }
 
-    func onAccountConnected(accountId: String, workerId: String) {
-        print("APP: onAccountConnected(accountId: \(accountId), userId: \(workerId))")
-        sendEvent(withName: "onAccountConnected", body: ["accountId": accountId, "userId": workerId])
+    func onAccountConnected(accountId: String, userId: String) {
+        print("APP: onAccountConnected(accountId: \(accountId), userId: \(userId))")
+        sendEvent(withName: "onAccountConnected", body: ["accountId": accountId, "userId": userId])
     }
 
-    func onAccountRemoved(accountId: String, workerId: String) {
-        print("APP: onAccountRemoved(accountId: \(accountId), userId: \(workerId))")
-        sendEvent(withName: "onAccountRemoved", body: ["accountId": accountId, "userId": workerId])
+    func onAccountRemoved(accountId: String, userId: String) {
+        print("APP: onAccountRemoved(accountId: \(accountId), userId: \(userId))")
+        sendEvent(withName: "onAccountRemoved", body: ["accountId": accountId, "userId": userId])
     }
 
-    func onWorkerCreated(token: String, workerId: String) {
-        print("APP: onUserCreated((token: \(token), userId: \(workerId))")
-        sendEvent(withName: "onUserCreated", body: ["token": token, "userId": workerId])
+    func onUserCreated(token: String, userId: String) {
+        print("APP: onUserCreated((token: \(token), userId: \(userId))")
+        sendEvent(withName: "onUserCreated", body: ["token": token, "userId": userId])
     }
 
     func onTokenExpired(handler: @escaping (String) -> ()) {
