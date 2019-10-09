@@ -1,7 +1,7 @@
 {
   "name": "@argyleio/react-native-argyle-sdk",
   "title": "React Native Argyle Sdk",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "react-native-argyle-sdk",
   "main": "index.js",
   "scripts": {
