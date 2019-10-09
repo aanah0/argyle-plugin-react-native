@@ -68,7 +68,7 @@ class ARArgyleSdkModule(context: ReactApplicationContext) : ReactContextBaseJava
         override fun onUserCreated(userToken: String, userId: String) {
             _token = userToken
             val params = Arguments.createMap()
-            params.putString("userToken", userToken)
+            params.putString("token", userToken)
             params.putString("userId", userId)
             sendEvent("onUserCreated", params)
             // return ["onAccountConnected", "onAccountRemoved", "onUserCreated", "onError", "onTokenExpired"]

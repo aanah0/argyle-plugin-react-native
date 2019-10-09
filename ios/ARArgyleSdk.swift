@@ -39,7 +39,7 @@ class ARArgyleSdk: RCTEventEmitter {
     @objc(start)
     func start() {
         DispatchQueue.main.sync {
-            let argyle = Argyle.shared.updateToken("").controller
+            let argyle = Argyle.shared.controller
             argyle.modalPresentationStyle = .fullScreen
             
             UIApplication.shared.keyWindow?.rootViewController?.present(argyle, animated: true, completion: nil)
