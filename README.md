@@ -1,12 +1,12 @@
-# @argyleio/react-native-argyle-sdk
+# @argyleio/argyle-plugin-react-native
 
 ## Getting started
 
-`$ npm install @argyleio/react-native-argyle-sdk --save` or `$ yarn add @argyleio/react-native-argyle-sdk`
+`$ npm install @argyleio/argyle-plugin-react-native --save` or `$ yarn add @argyleio/argyle-plugin-react-native`
 
 ### Mostly automatic installation
 
-`$ react-native link @argyleio/react-native-argyle-sdk` (if react-native > 0.60.x, this step is not needed)
+`$ react-native link @argyleio/argyle-plugin-react-native` (if react-native > 0.60.x, this step is not needed)
 
 ### iOS extra steps installation:
 
@@ -60,7 +60,7 @@ pod 'React', path: rn_path, subspecs: [
 steps from `without pods` part, plus
 
 1. In XCode, in the project navigator, right click `Libraries` ➜ `Add Files to [your project's name]`
-2. Go to `node_modules` ➜ `@argyleio/react-native-argyle-sdk` and add `ARArgyleSdk.xcodeproj`
+2. Go to `node_modules` ➜ `@argyleio/argyle-plugin-react-native` and add `ARArgyleSdk.xcodeproj`
 3. In XCode, in the project navigator, select your project. Add `libARArgyleSdk.a` to your project's `Build Phases` ➜ `Link Binary With Libraries`
 4. Run your project (`Cmd+R`)<
 
@@ -71,18 +71,18 @@ steps from `without pods` part, plus
   - Add `new ARArgyleSdkPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
-  	include ':@argyleio/react-native-argyle-sdk'
-  	project(':@argyleio/react-native-argyle-sdk').projectDir = new File(rootProject.projectDir, 	'../node_modules/@argyleio/react-native-argyle-sdk/android')
+  	include ':@argyleio/argyle-plugin-react-native'
+  	project(':@argyleio/argyle-plugin-react-native').projectDir = new File(rootProject.projectDir, 	'../node_modules/@argyleio/argyle-plugin-react-native/android')
   	```
 3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:
   	```
-      compile project(':@argyleio/react-native-argyle-sdk')
+      compile project(':@argyleio/argyle-plugin-react-native')
   	```
 
 
 ## Usage (example)
 ```javascript
-import ARArgyleSdk from '@argyleio/react-native-argyle-sdk'
+import ArgyleSdk from '@argyleio/argyle-plugin-react-native'
 
 // Configure the SDK before hand, once. only call ArgyleSdk.start() when the UI is needed
 ArgyleSdk.loginWith("your_plugin_key", "https://api-sandbox.develop.argyle.io", "")

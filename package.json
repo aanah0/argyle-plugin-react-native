@@ -1,8 +1,8 @@
 {
-  "name": "@argyleio/react-native-argyle-sdk",
-  "title": "React Native Argyle Sdk",
-  "version": "1.0.4",
-  "description": "react-native-argyle-sdk",
+  "name": "@argyleio/argyle-plugin-react-native",
+  "title": "Argyle Plugin React Native",
+  "version": "1.0.0",
+  "description": "argyle-plugin-react-native",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,8 +12,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/argyle-systems/sdk-react-native.git",
-    "baseUrl": "https://github.com/argyle-systems/sdk-react-native.git"
+    "url": "git+https://github.com/argyle-systems/argyle-plugin-react-native.git",
+    "baseUrl": "https://github.com/argyle-systems/argyle-plugin-react-native.git"
   },
   "keywords": [
     "react-native"
