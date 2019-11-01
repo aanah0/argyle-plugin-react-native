@@ -85,6 +85,7 @@ steps from `without pods` part, plus
 import ArgyleSdk from '@argyleio/argyle-plugin-react-native'
 
 // Configure the SDK before hand, once. only call ArgyleSdk.start() when the UI is needed
+// ArgyleSdk.loginWith("your_plugin_key", "server_url", "existing_user_token")
 ArgyleSdk.loginWith("your_plugin_key", "https://api-sandbox.develop.argyle.io", "")
 ArgyleSdk.onUserCreated(res => console.log("onUserCreated", res))
 
