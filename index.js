@@ -15,7 +15,8 @@ class ArgyleSdk {
     static eventsEmitter = new NativeEventEmitter(ARArgyleSdk)
     static listeners = {}
 
-    static loginWith(pluginKey, apiHost, token) {
+    static loginWith(pluginKey, apiHost, _token) {
+        let token = _token || ""
         ARArgyleSdk.loginWith(pluginKey, apiHost, token)
     }
 
